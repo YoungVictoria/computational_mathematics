@@ -1,0 +1,10 @@
+F:\3курс(2сем)\Селеванова\1лаба\1labaSel\1labaSel\bin\Debug\1labaSel.exe.config
+F:\3курс(2сем)\Селеванова\1лаба\1labaSel\1labaSel\bin\Debug\1labaSel.exe
+F:\3курс(2сем)\Селеванова\1лаба\1labaSel\1labaSel\bin\Debug\1labaSel.pdb
+F:\3курс(2сем)\Селеванова\1лаба\1labaSel\1labaSel\obj\Debug\1labaSel.csprojAssemblyReference.cache
+F:\3курс(2сем)\Селеванова\1лаба\1labaSel\1labaSel\obj\Debug\_1labaSel.Form1.resources
+F:\3курс(2сем)\Селеванова\1лаба\1labaSel\1labaSel\obj\Debug\_1labaSel.Properties.Resources.resources
+F:\3курс(2сем)\Селеванова\1лаба\1labaSel\1labaSel\obj\Debug\1labaSel.csproj.GenerateResource.cache
+F:\3курс(2сем)\Селеванова\1лаба\1labaSel\1labaSel\obj\Debug\1labaSel.csproj.CoreCompileInputs.cache
+F:\3курс(2сем)\Селеванова\1лаба\1labaSel\1labaSel\obj\Debug\1labaSel.exe
+F:\3курс(2сем)\Селеванова\1лаба\1labaSel\1labaSel\obj\Debug\1labaSel.pdb
