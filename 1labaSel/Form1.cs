@@ -40,14 +40,8 @@ namespace _1labaSel
                 //draw.DrawHord(pointhord, width, height, grap);
                 draw.DrawSec(pointhord, width, height, grap);
             });
-
-           // Limits lim = new Limits();
-            //lim.LimA = 0.7f;//сократить интервал , что бы функция была на нем монотонна
-            //lim.LimB = 0.9f;
-            //lim.ColculLimit();
             
-            string result = /*"Границы: " + lim.LimA.ToString() + " ; " + lim.LimB.ToString() + "\r\n"
-                            + */ "F(x) = 0 в точке " + Math.Round(lim.Y, 3).ToString();
+            string result =  "F(x) = 0 в точке " + Math.Round(lim.Y, 3).ToString();
             richTextBox1.Text = result;
 
         }
