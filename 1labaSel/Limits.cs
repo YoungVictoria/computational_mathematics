@@ -14,12 +14,20 @@ namespace _1labaSel
         double epsilon = 0.0001;
         public double Y;
 
+        /// <summary>
+        /// вычислении функции
+        /// </summary>
+        /// <param name="a1"></param>
+        /// <returns></returns>
         public float ColculFunc(float a1)
         {
             float result = (float)Math.Round((Math.Acos(a1 * a1) - a1), 3);
             return result;
         }
 
+        /// <summary>
+        /// нахождение границ
+        /// </summary>
         public void ColculLimit()
         {
             float middle = (float)Math.Round(((LimB + LimA) / 2),3);
@@ -51,6 +59,10 @@ namespace _1labaSel
 
         }
 
+        /// <summary>
+        /// вычисление функции методом хорд
+        /// </summary>
+        /// <returns></returns>
         public List<PointF> GetHord()
         {
             Drawing draw = new Drawing();            
@@ -78,12 +90,10 @@ namespace _1labaSel
             return result;
         }
 
-        public float ColculDoublProiz(float a1)
-        {
-            float res = (float)Math.Round(((-2 - 2 * Math.Pow(a1, 4)) / ((1 - Math.Pow(a1, 4)) * Math.Sqrt((1 - Math.Pow(a1, 4))))), 3);
-            return res;
-        }
-
+        /// <summary>
+        /// вычисление функции методом секущих
+        /// </summary>
+        /// <returns></returns>
         public List<PointF> GetSec()
         {
             List<PointF> pointsec = new List<PointF>();
@@ -99,10 +109,7 @@ namespace _1labaSel
                 Y = LimB;
             }
 
-
-
             return pointsec;
-
         }
 
     }
