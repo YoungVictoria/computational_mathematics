@@ -27,8 +27,12 @@ namespace _1labaSel
             Limits lim = new Limits();
             lim.LimA = 0.2f;//сократить интервал , что бы функция была на нем монотонна
             lim.LimB = 0.9f;
-            //List<PointF> pointhord = lim.GetHord(); //хорд
-           List<PointF> pointhord = lim.GetSec(); //секущие
+            List<PointF> pointhord = new List<PointF>();
+            List<PointF> pointcas = new List<PointF>();
+            if (radioHord.Checked)
+                pointhord = lim.GetHord(); //хорд
+            if(radioCas.Checked)
+                pointcas = lim.GetSec(); //секущие
             Task.Factory.StartNew(() =>
             {
                 grap.Clear(pictureBox1.BackColor);
@@ -37,8 +41,10 @@ namespace _1labaSel
                 draw.DrawSet(grap, width, height);
                 draw.ToScreen(grap, width / 2, height / 2, width, height);
 
-                //draw.DrawHord(pointhord, width, height, grap);
-                draw.DrawSec(pointhord, width, height, grap);
+                if(radioHord.Checked)
+                    draw.DrawHord(pointhord, width, height, grap);
+                if (radioCas.Checked)
+                    draw.DrawSec(pointcas, width, height, grap);
             });
             
             string result =  "F(x) = 0 в точке " + Math.Round(lim.Y, 3).ToString();
@@ -62,8 +68,12 @@ namespace _1labaSel
             Limits lim = new Limits();
             lim.LimA = 0.2f;//сократить интервал , что бы функция была на нем монотонна
             lim.LimB = 0.9f;
-            //List<PointF> pointhord = lim.GetHord();
-            List<PointF> pointhord = lim.GetSec();
+            List<PointF> pointhord = new List<PointF>();
+            List<PointF> pointcas = new List<PointF>();
+            if (radioHord.Checked)
+                pointhord = lim.GetHord(); //хорд
+            if (radioCas.Checked)
+                pointcas = lim.GetSec(); //секущие
 
             draw.Scale = trackBar1.Value * 5 + scale;
             draw.DrawOXY(grap, width, height);
@@ -71,8 +81,56 @@ namespace _1labaSel
             draw.DrawSet(grap, width, height);
             draw.ToScreen(grap, width / 2, height / 2, width, height);
 
-            //draw.DrawHord(pointhord, width, height, grap);
-            draw.DrawSec(pointhord, width, height, grap);
+            if (radioHord.Checked)
+                draw.DrawHord(pointhord, width, height, grap);
+            if (radioCas.Checked)
+                draw.DrawSec(pointcas, width, height, grap);
+        }
+
+        private void radioHord_CheckedChanged(object sender, EventArgs e)
+        {
+            Graphics grap = Graphics.FromHwnd(pictureBox1.Handle);
+            int width = pictureBox1.Width;
+            int height = pictureBox1.Height;
+            grap.Clear(pictureBox1.BackColor);
+
+            Limits lim = new Limits();
+            lim.LimA = 0.2f;//сократить интервал , что бы функция была на нем монотонна
+            lim.LimB = 0.9f;
+            List<PointF> pointhord = new List<PointF>();
+            if (radioHord.Checked)
+                pointhord = lim.GetHord(); 
+ 
+            draw.DrawOXY(grap, width, height);
+            draw.DrawNumber(grap, width, height);
+            draw.DrawSet(grap, width, height);
+            draw.ToScreen(grap, width / 2, height / 2, width, height);
+
+            if (radioHord.Checked)
+                draw.DrawHord(pointhord, width, height, grap);
+        }
+
+        private void radioCas_CheckedChanged(object sender, EventArgs e)
+        {
+            Graphics grap = Graphics.FromHwnd(pictureBox1.Handle);
+            int width = pictureBox1.Width;
+            int height = pictureBox1.Height;
+            grap.Clear(pictureBox1.BackColor);
+
+            Limits lim = new Limits();
+            lim.LimA = 0.2f;//сократить интервал , что бы функция была на нем монотонна
+            lim.LimB = 0.9f;
+            List<PointF> pointcas = new List<PointF>();
+            if (radioCas.Checked)
+                pointcas = lim.GetSec(); 
+
+            draw.DrawOXY(grap, width, height);
+            draw.DrawNumber(grap, width, height);
+            draw.DrawSet(grap, width, height);
+            draw.ToScreen(grap, width / 2, height / 2, width, height);
+
+            if (radioCas.Checked)
+                draw.DrawSec(pointcas, width, height, grap);
         }
     }
 }

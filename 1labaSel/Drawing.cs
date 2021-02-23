@@ -28,9 +28,9 @@ namespace _1labaSel
             int num = 0;
             float x0 = width / 2;
             float y0 = height / 2;
-            Pen pen = new Pen(Color.Black, 2);
+            Pen pen = new Pen(Color.Blue, 2);
             Font font = new Font("Arial", 10);
-            SolidBrush brush = new SolidBrush(Color.Black);
+            SolidBrush brush = new SolidBrush(Color.Blue);
             grap.DrawString(num.ToString(), font, brush, new Point((int)x0 + 1, (int)y0 + 7));///0
             num++;
             for (float x = x0 + Scale; x < width - Scale + 5; x += Scale)//засечки х
@@ -55,7 +55,7 @@ namespace _1labaSel
 
             float x = Scale;
             float step = 0;
-            Pen pen = new Pen(Color.Black, 2);
+            Pen pen = new Pen(Color.Black, 1);
 
             while (y0 - Scale * step > 0)//горизонтальные
             {

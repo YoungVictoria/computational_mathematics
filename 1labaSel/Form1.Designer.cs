@@ -32,6 +32,8 @@
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.radioHord = new System.Windows.Forms.RadioButton();
+            this.radioCas = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
@@ -39,7 +41,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(16, 27);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(485, 399);
             this.pictureBox1.TabIndex = 0;
@@ -49,7 +51,7 @@
             // trackBar1
             // 
             this.trackBar1.Location = new System.Drawing.Point(627, 65);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(4);
             this.trackBar1.Maximum = 16;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(171, 56);
@@ -60,7 +62,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(615, 145);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(257, 79);
             this.richTextBox1.TabIndex = 2;
@@ -75,16 +77,42 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Масштаб";
             // 
+            // radioHord
+            // 
+            this.radioHord.AutoSize = true;
+            this.radioHord.Location = new System.Drawing.Point(615, 263);
+            this.radioHord.Name = "radioHord";
+            this.radioHord.Size = new System.Drawing.Size(105, 21);
+            this.radioHord.TabIndex = 4;
+            this.radioHord.TabStop = true;
+            this.radioHord.Text = "Метод хорд";
+            this.radioHord.UseVisualStyleBackColor = true;
+            this.radioHord.CheckedChanged += new System.EventHandler(this.radioHord_CheckedChanged);
+            // 
+            // radioCas
+            // 
+            this.radioCas.AutoSize = true;
+            this.radioCas.Location = new System.Drawing.Point(762, 263);
+            this.radioCas.Name = "radioCas";
+            this.radioCas.Size = new System.Drawing.Size(159, 21);
+            this.radioCas.TabIndex = 5;
+            this.radioCas.TabStop = true;
+            this.radioCas.Text = "Метод касательных";
+            this.radioCas.UseVisualStyleBackColor = true;
+            this.radioCas.CheckedChanged += new System.EventHandler(this.radioCas_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.radioCas);
+            this.Controls.Add(this.radioHord);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -101,6 +129,8 @@
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton radioHord;
+        private System.Windows.Forms.RadioButton radioCas;
     }
 }
 
