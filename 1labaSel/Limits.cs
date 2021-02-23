@@ -92,15 +92,6 @@ namespace _1labaSel
             pointsec.Add(new PointF(LimB, ColculFunc(LimB)));
             while (Math.Abs(x-y)>=epsilon)
             {
-                /*Y = tmp;
-                tmp = LimB - ((LimB - LimA) / (ColculFunc(LimB) - ColculFunc(LimA))) * ColculFunc(LimB);
-                
-                LimA = LimB;
-                LimB = tmp;
-                float A = LimA;
-                pointsec.Add(new PointF(A, LimA));
-                float B = LimB;
-                pointsec.Add(new PointF(B, LimB)); */
                 x = LimB - ColculFunc(LimB) / ColculProiz(LimB);
                 y = LimB - (LimB - LimA) / (ColculFunc(LimB) - ColculFunc(LimA)) * ColculFunc(LimB);
                 LimB = y;
