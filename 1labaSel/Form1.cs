@@ -108,6 +108,8 @@ namespace _1labaSel
 
             if (radioHord.Checked)
                 draw.DrawHord(pointhord, width, height, grap);
+            string result = "F(x) = 0 в точке " + Math.Round(lim.Y, 3).ToString();
+            richTextBox1.Text = result;
         }
 
         private void radioCas_CheckedChanged(object sender, EventArgs e)
@@ -131,6 +133,21 @@ namespace _1labaSel
 
             if (radioCas.Checked)
                 draw.DrawSec(pointcas, width, height, grap);
+            string result = "F(x) = 0 в точке " + Math.Round(lim.Y, 3).ToString();
+            richTextBox1.Text = result;
+        }
+
+        /// <summary>
+        /// показать форму с информацией
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            richTextBox2.Clear();
+            richTextBox2.Visible = !richTextBox2.Visible;
+            richTextBox2.Text = "Выберите метод хорд или метод касательных, чтобы вычислить значение функции\r\n"+
+                                 "Перемещайте бегунок масштаба, чтобы увеличить или уменьшить изображение";
         }
     }
 }
